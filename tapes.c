@@ -1,3 +1,5 @@
+//optimal storage on tapes problem using Greedy approach
+
 
 #include<stdio.h>
 
