@@ -1,6 +1,3 @@
-//optimal storage on tapes problem using Greedy approach
-
-
 #include<stdio.h>
 
 void accept(int array[10],int order[10],int n);
