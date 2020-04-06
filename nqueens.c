@@ -2,8 +2,9 @@
 #include<stdbool.h>
 #define N 30
 static int count;
-void SolveNQueen(char board[N][N],int row,int count);
+void SolveNQueen(char board[N][N],int row,int n);
 bool CanPlace(char board[N][N],int row,int col,int n);
+
 int main()
 {
 	char board[N][N];
@@ -16,17 +17,12 @@ int main()
 			board[i][j]='_';
 		}
 	}	
-	
-	
-	
+
 	SolveNQueen(board,0,n);
 	printf("\nPossible no. of position of queen in %d*%d chess board are %d\n",n,n,count);
-			
-
+	
 	return 0;
 }
-
-
 
 void SolveNQueen(char board[N][N],int row,int n)
 {
@@ -56,20 +52,15 @@ void SolveNQueen(char board[N][N],int row,int n)
 		board[row][pos]='_';
 
 	}
-	//board[row][n-1]='_';
-
-	
+	//board[row][n-1]='_';	
 }
-
-
-
 
 bool CanPlace(char board[N][N],int row,int col,int n)
 {
 
 	int i=0,x=0,y=0;
 
-	//for checking row
+	//for checking column
 	for(i=0;i<row;i++)
 	{
 		if(board[i][col]=='1')
@@ -78,7 +69,6 @@ bool CanPlace(char board[N][N],int row,int col,int n)
 	}
 
 	//for checking top left diagnol
-
 	x=row-1;
 	y=col-1;	
 	while(x>=0 && y>=0)
@@ -90,28 +80,20 @@ bool CanPlace(char board[N][N],int row,int col,int n)
 		--y;
 	}	 
 	
-	
 	//for checking top right diagnol
-
 	x=row-1;
 	y=col+1;
-	
 	while(x>=0 && y<n)
 	{	
 		if(board[x][y]=='1')
 			return false;	
-
 		--x;
 		++y;
 	}	 
-	
-	return true;
-	
+	return true;	
 }
 
-
 /*
-
 od@od-desktop:~/Desktop$ gcc nqueens.c 
 od@od-desktop:~/Desktop$ ./a.out
 
