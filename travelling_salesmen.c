@@ -3,8 +3,8 @@
 #define N 4
 int root;
 int visited_all=(1<<N)-1;
-int path[16][N];
-int dp[16][N];
+int path[1<<N][N];
+int dp[1<<N][N];
 int dist[N][N] = {
        			{0,	20,	42,	25},
        			{20,	0,	30,	34},
@@ -51,7 +51,7 @@ int tsp(int mask,int source)
 	}
 	
 	int ans=999,minAns=0,i,k;
-	for(i=0;i<4;i++)
+	for(i=0;i<N;i++)
 	{
 
 		if((mask&(1<<i))==0)
