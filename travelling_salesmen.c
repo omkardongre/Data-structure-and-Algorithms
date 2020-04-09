@@ -23,7 +23,7 @@ int main()
 
 	int i,j,cost=0,mask;
 	initisation();	
-	printf("\n Enter starting vertex\t: ");
+	printf("\n Enter starting vertex 1-%d: ",N);
 	scanf("%d",&root);
 	root=root-1;
 	mask= 1<<root;
