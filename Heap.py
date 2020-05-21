@@ -22,9 +22,7 @@ class maxheap:
             index=pindex
             pindex=(pindex-1)//2
         
-        
         self.data[index]=value
-        
         print(self.data)
     
     
@@ -33,7 +31,6 @@ class maxheap:
         if self.data:
             return self.data[0]
 
-        
     def delete(self):
         
         if not self.size:
@@ -41,14 +38,11 @@ class maxheap:
         #last value
         lval=self.data.pop()
         self.size-=1
-        curr=0​
-2
+        curr=0
 
-        
         #left and right index
-        lp=curr*2+1
-        rp=curr*2+2
-    
+        lp=1
+        rp=2
         while rp<= self.size-1:
             if self.data[lp]>self.data[rp]:
                 self.data[curr]=self.data[lp]
