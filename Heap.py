@@ -1,5 +1,6 @@
 
 #Heap data structure using list
+#Heap is "Almost Complete Binary tree" so it usually implement using array to save space  
 
 class maxheap:
     def __init__(self):
