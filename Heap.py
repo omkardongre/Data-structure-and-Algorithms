@@ -1,6 +1,8 @@
 
 #Heap data structure using list
-#Heap is "Almost Complete Binary tree" so it usually implement using array to save space  
+#Heap is "Almost Complete Binary tree" so it implement using array to save space, but for visualization we draw in tree manner.
+#Insertion and  Deletion  in log(n) time
+#Insertion from last node and deletion from first node always
 
 class maxheap:
     def __init__(self):
